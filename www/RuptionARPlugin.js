@@ -60,7 +60,7 @@
 	 *                                      	}
 	 *                               	}
 	 */
-	RuptionARPlugin.prototype.loadWorld = function(successCallback, errorCallback, architectWorldPath, requiredFeatures, startupConfiguration) {
+	RuptionARPlugin.prototype.loadWorld = function(successCallback, errorCallback) {
 
 		cordova.exec(successCallback, errorCallback, "RuptionARPlugin", "open", []);
 
