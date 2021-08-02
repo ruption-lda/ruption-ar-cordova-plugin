@@ -1,0 +1,36 @@
+{
+  "name": "com.ruption.ar.ruptionarplugin",
+  "version": "1.0.0",
+  "description": "Augmented Reality Ruption AR SDK Plugin \n        The Ruption AR Cordova Plugin enables developers to embed an augmented reality view into their Cordova project. You can create a fully featured app with advanced augmented reality features purely using HTML, CSS and JavaScript.\n    ",
+  "cordova": {
+    "id": "",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ruption-lda/ruption-ar-cordova-plugin.git"
+  },
+  "keywords": [
+    "AR",
+    "augmented reality",
+    "Ruption",
+    "surface tracking",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "author": "Ruption Lda",
+  "license": "(c) 2021 Ruption Lda - see License for details of the license",
+  "bugs": {
+    "url": "https://github.com/ruption-lda/ruption-ar-cordova-plugin/issues"
+  },
+  "homepage": "https://github.com/ruption-lda/ruption-ar-cordova-plugin#readme"
+}

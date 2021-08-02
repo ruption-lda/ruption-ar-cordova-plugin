@@ -1,0 +1,11 @@
+dependencies {
+    compile (name: 'googlearcoresdk', ext:'aar')
+    compile 'com.google.ar:core:1.25.0'
+}
+
+repositories {
+    flatDir{
+        dirs 'libs'
+    }
+}
+
