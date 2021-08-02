@@ -9,7 +9,7 @@ A Cordova Plugin providing surface detection augmented reality.
 
 **Note: This plugin has hard and software requirements for Android and iOS devices and does not run on a desktop browser.**
 
-The Wikitude Plugin is under Apache 2.0 license (see below), where the Wikitude SDK library (pre-bundled) itself follows a proprietary license scheme (see [LICENSE.MD](LICENSE.MD) for details).
+The Wikitude Plugin is under Apache 2.0 license (see below), where the Wikitude SDK library (pre-bundled) itself follows a proprietary license scheme (see [LICENSE](LICENSE) for details).
 
 
 ``` 
