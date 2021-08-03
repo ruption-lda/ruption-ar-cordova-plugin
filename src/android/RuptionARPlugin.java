@@ -47,7 +47,7 @@ import android.view.ViewManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.ar.core.examples.java.helloar.HelloArActivity;
 
