@@ -1,5 +1,6 @@
 dependencies {
     compile (name: 'googlearcoresdk', ext:'aar')
+    compile (name: 'appcompat-1.3.1', ext: 'aar')
     compile 'com.google.ar:core:1.25.0'
 }
 
