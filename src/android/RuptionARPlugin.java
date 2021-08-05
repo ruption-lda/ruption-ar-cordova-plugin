@@ -141,6 +141,7 @@ public class RuptionARPlugin extends CordovaPlugin {
                 this.cordova.requestPermissions(this, CAMERA_PERMISSION_REQUEST_CODE, new String[] {Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION});
             } else {
                 helloARRuption.onSurfaceCreated(render);
+                helloARRuption.onSurfaceChanged(render, int width, int height);
                 helloARRuption.onDrawFrame(render);
             }
             return true;
