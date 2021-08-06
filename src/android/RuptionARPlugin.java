@@ -11,8 +11,6 @@ import android.Manifest;
 import com.google.ar.core.examples.java.common.samplerender.SampleRender;
 import com.google.ar.core.examples.java.helloar.HelloArActivity;
 
-import static javax.swing.JOptionPane.showMessageDialog;
-
 public class RuptionARPlugin extends CordovaPlugin {
 
     private static final String	ACTION_CLOSE				= "close";
@@ -148,7 +146,7 @@ public class RuptionARPlugin extends CordovaPlugin {
                 RuptionARPlugin.this.helloARRuption.onSurfaceChanged(render, width, height);
                 RuptionARPlugin.this.helloARRuption.onDrawFrame(render); */
                 callbackContext.success();
-                showMessageDialog(null, "This is even shorter");
+                JOptionPane.showMessageDialog(null, "My Goodness, this is so concise");
             //}
             return true;
         }
