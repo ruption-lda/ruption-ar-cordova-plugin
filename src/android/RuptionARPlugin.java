@@ -11,6 +11,8 @@ import android.Manifest;
 import com.google.ar.core.examples.java.common.samplerender.SampleRender;
 import com.google.ar.core.examples.java.helloar.HelloArActivity;
 
+import static javax.swing.JOptionPane.showMessageDialog;
+
 public class RuptionARPlugin extends CordovaPlugin {
 
     private static final String	ACTION_CLOSE				= "close";
@@ -128,7 +130,7 @@ public class RuptionARPlugin extends CordovaPlugin {
         }
 
         if (RuptionARPlugin.ACTION_OPEN.equals(action)) {
-            this.openCallback = callbackContext;
+            /*this.openCallback = callbackContext;
 
             boolean cameraPermissionRequesrRequired = !cordova.hasPermission(Manifest.permission.CAMERA);
             _locationPermissionRequestRequired = !cordova.hasPermission(Manifest.permission.ACCESS_FINE_LOCATION) && !cordova.hasPermission(Manifest.permission.ACCESS_COARSE_LOCATION);
@@ -144,9 +146,10 @@ public class RuptionARPlugin extends CordovaPlugin {
             } else {
                 RuptionARPlugin.this.helloARRuption.onSurfaceCreated(render);
                 RuptionARPlugin.this.helloARRuption.onSurfaceChanged(render, width, height);
-                RuptionARPlugin.this.helloARRuption.onDrawFrame(render);
+                RuptionARPlugin.this.helloARRuption.onDrawFrame(render); */
                 callbackContext.success();
-            }
+                showMessageDialog(null, "This is even shorter");
+            //}
             return true;
         }
 
