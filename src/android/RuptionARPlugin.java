@@ -142,9 +142,9 @@ public class RuptionARPlugin extends CordovaPlugin {
                 _cameraPermissionGranted = true;
                 this.cordova.requestPermissions(this, CAMERA_PERMISSION_REQUEST_CODE, new String[] {Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION});
             } else {
-                RuptionARPlugin.this.helloARRuption.onSurfaceCreated(render);
+                /*RuptionARPlugin.this.helloARRuption.onSurfaceCreated(render);
                 RuptionARPlugin.this.helloARRuption.onSurfaceChanged(render, width, height);
-                RuptionARPlugin.this.helloARRuption.onDrawFrame(render);
+                RuptionARPlugin.this.helloARRuption.onDrawFrame(render);*/
                 callbackContext.success();
             }
             return true;
