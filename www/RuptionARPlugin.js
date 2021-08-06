@@ -43,9 +43,9 @@
 		
 
 		// We add an event listener on the resume and pause event of the application life-cycle
-		document.addEventListener("resume", this.onResume, false);
+		/*document.addEventListener("resume", this.onResume, false);
 		document.addEventListener("pause", this.onPause, false);
-		document.addEventListener("backbutton", this.onBackButton, false);
+		document.addEventListener("backbutton", this.onBackButton, false); */
 	};
 
 	

@@ -133,7 +133,7 @@ public class RuptionARPlugin extends CordovaPlugin {
             boolean cameraPermissionRequesrRequired = !cordova.hasPermission(Manifest.permission.CAMERA);
             _locationPermissionRequestRequired = !cordova.hasPermission(Manifest.permission.ACCESS_FINE_LOCATION) && !cordova.hasPermission(Manifest.permission.ACCESS_COARSE_LOCATION);
 
-            /*if(cameraPermissionRequesrRequired && _locationPermissionRequestRequired) {
+            if(cameraPermissionRequesrRequired && _locationPermissionRequestRequired) {
                 _cameraPermissionGranted = false;
                 this.cordova.requestPermissions(this, CAMERA_PERMISSION_REQUEST_CODE, new String[] {Manifest.permission.CAMERA, Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION} );
             } else if (cameraPermissionRequesrRequired) {
@@ -141,12 +141,12 @@ public class RuptionARPlugin extends CordovaPlugin {
             } else if (_locationPermissionRequestRequired) {
                 _cameraPermissionGranted = true;
                 this.cordova.requestPermissions(this, CAMERA_PERMISSION_REQUEST_CODE, new String[] {Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION});
-            } else { */
-                /*RuptionARPlugin.this.helloARRuption.onSurfaceCreated(render);
+            } else {
+                RuptionARPlugin.this.helloARRuption.onSurfaceCreated(render);
                 RuptionARPlugin.this.helloARRuption.onSurfaceChanged(render, width, height);
-                RuptionARPlugin.this.helloARRuption.onDrawFrame(render);*/
+                RuptionARPlugin.this.helloARRuption.onDrawFrame(render);
                 callbackContext.success();
-            //}
+            }
             return true;
         }
 
