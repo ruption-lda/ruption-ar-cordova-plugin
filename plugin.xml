@@ -82,8 +82,6 @@
         <info>
             Have fun using ruption's augmented reality plugin for Cordova. Visit https://www.ruption.pt/RuptionARPlugin/doc/documentation/ for detailed documentation for the plugin.
             
-            Make sure that you enter your Ruption AR SDK trial license key in `RuptionARPlugin.js` line 12. If you havent bought a license please visit http://www.ruption.pt/RuptionARPlugin.
-            
             If you want to contribute to the open source project, please visit us at GitHub, http://github.com/ndilokelwa-disrupting
         </info>
 

@@ -38,7 +38,7 @@
 	
 	RuptionARPlugin.prototype.loadWorld = function(successCallback, errorCallback) {
 
-		cordova.exec(successCallback, errorCallback, "RuptionARPlugin", "close", []);
+		cordova.exec(successCallback, errorCallback, "RuptionARPlugin", "beep", []);
 		alert("Test");
 
 		
