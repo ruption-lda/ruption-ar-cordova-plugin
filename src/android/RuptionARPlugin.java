@@ -145,8 +145,7 @@ public class RuptionARPlugin extends CordovaPlugin {
                 RuptionARPlugin.this.helloARRuption.onSurfaceCreated(render);
                 RuptionARPlugin.this.helloARRuption.onSurfaceChanged(render, width, height);
                 RuptionARPlugin.this.helloARRuption.onDrawFrame(render); */
-                callbackContext.success();
-                JOptionPane.showMessageDialog(null, "My Goodness, this is so concise");
+                callbackContext.success("This ended up right");
             //}
             return true;
         }
