@@ -150,14 +150,24 @@ public class RuptionARPlugin extends CordovaPlugin {
             return true;
         }
 
-        if ("beep".equals(action)) {
-        callbackContext.success();
-        return true;
+         if (action.equals("echo")) {
+            String message = "test message";
+            this.echo(message, callbackContext);
+            return true;
         }
+
     }
 
         callbackContext.sendPluginResult( new PluginResult(PluginResult.Status.ERROR, "no such action: " + action));
         return false;
+    }
+
+    private void echo(String message, CallbackContext callbackContext) {
+        if (message != null && message.length() > 0) {
+            callbackContext.success(message);
+        } else {
+            callbackContext.error(message + "!");
+        }
     }
 
     protected static class  HelloARRuption extends HelloArActivity {
