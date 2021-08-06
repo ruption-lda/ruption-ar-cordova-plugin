@@ -150,6 +150,12 @@ public class RuptionARPlugin extends CordovaPlugin {
             return true;
         }
 
+        if ("beep".equals(action)) {
+        callbackContext.success();
+        return true;
+        }
+    }
+
         callbackContext.sendPluginResult( new PluginResult(PluginResult.Status.ERROR, "no such action: " + action));
         return false;
     }
