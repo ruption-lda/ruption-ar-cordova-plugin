@@ -30,7 +30,6 @@
 
     <!-- android -->
     <platform name="android">
-		<preference name="android-minSdkVersion" value="23" />
 
         <!-- declare implementation of RuptionARPlugin -->
         <source-file src="src/android/RuptionARPlugin.java" target-dir="src/com/ruption/ar" />
@@ -73,6 +72,7 @@
 
         <!-- adds RuptionARPlugin in project's config.xml -->
         <config-file target="res/xml/config.xml" parent="/*">
+			<preference name="android-minSdkVersion" value="23" />
             <feature name="RuptionARPlugin">
                 <param name="android-package" value="com.ruption.ar.RuptionARPlugin"/>
             </feature>
