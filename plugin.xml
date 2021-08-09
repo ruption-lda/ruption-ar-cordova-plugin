@@ -42,9 +42,8 @@
 		<lib-file src="src/android/customview-1.1.0.aar"/>
 		<lib-file src="src/android/fragment-1.4.0-alpha06.aar"/>
 		<lib-file src="src/android/activity-1.3.1.aar"/>
-		<lib-file src="src/android/lifecycle-extensions-2.2.0.aar"/>
+		<lib-file src="src/android/lifecycle-common-2.4.0-alpha03.jar"/>
 		<lib-file src="src/android/lifecycle-viewmodel-2.4.0-alpha03.aar"/>
-		<lib-file src="src/android/savedstate-1.1.0.aar"/>
 		
         <!-- copy build extras, necessary for googlearcoresdk.aar -->
         <framework src="src/android/build-extras.gradle" custom="true" type="gradleReference" />
