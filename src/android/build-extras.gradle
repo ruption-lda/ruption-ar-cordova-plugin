@@ -6,7 +6,6 @@ dependencies {
     compile (name: 'customview-1.1.0', ext: 'aar')
     compile (name: 'fragment-1.4.0-alpha06', ext: 'aar')
     compile (name: 'activity-1.3.1', ext: 'aar')
-    compile (name: 'lifecycle-extensions-2.2.0', ext: 'aar')
     compile (name: 'lifecycle-common-2.4.0-alpha03', ext: 'jar')
     compile 'com.google.ar:core:1.25.0'
 }
