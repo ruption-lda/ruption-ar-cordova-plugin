@@ -128,7 +128,7 @@ public class RuptionARPlugin extends CordovaPlugin {
         }
 
         if (RuptionARPlugin.ACTION_OPEN.equals(action)) {
-            /*this.openCallback = callbackContext;
+            this.openCallback = callbackContext;
 
             boolean cameraPermissionRequesrRequired = !cordova.hasPermission(Manifest.permission.CAMERA);
             _locationPermissionRequestRequired = !cordova.hasPermission(Manifest.permission.ACCESS_FINE_LOCATION) && !cordova.hasPermission(Manifest.permission.ACCESS_COARSE_LOCATION);
@@ -146,11 +146,11 @@ public class RuptionARPlugin extends CordovaPlugin {
                 RuptionARPlugin.this.helloARRuption.onSurfaceChanged(render, width, height);
                 RuptionARPlugin.this.helloARRuption.onDrawFrame(render); */
                 callbackContext.success("This ended up right");
-            //}
+            }
             return true;
         }
 
-         if (action.equals("echo")) {
+        if (action.equals("echo")) {
             String message = "test message";
             this.echo(message, callbackContext);
             return true;
