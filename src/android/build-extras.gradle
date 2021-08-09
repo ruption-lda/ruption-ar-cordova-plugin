@@ -4,6 +4,7 @@ dependencies {
     compile (name: 'core-1.7.0-alpha01', ext: 'aar')
     compile (name: 'drawerlayout-1.1.1', ext: 'aar')
     compile (name: 'customview-1.1.0', ext: 'aar')
+    compile (name: 'fragment-1.4.0-alpha06', ext: 'aar')
     compile 'com.google.ar:core:1.25.0'
 }
 
