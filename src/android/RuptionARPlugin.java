@@ -144,7 +144,7 @@ public class RuptionARPlugin extends CordovaPlugin {
             } else {
                 RuptionARPlugin.this.helloARRuption.onSurfaceCreated(render);
                 RuptionARPlugin.this.helloARRuption.onSurfaceChanged(render, width, height);
-                RuptionARPlugin.this.helloARRuption.onDrawFrame(render); */
+                RuptionARPlugin.this.helloARRuption.onDrawFrame(render);
                 callbackContext.success("This ended up right");
             }
             return true;
