@@ -44,7 +44,7 @@ public class RuptionARPlugin extends CordovaPlugin {
     int height;
 
     @Override
-    public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) {
+    public boolean execute(final String action, final JSONArray args, final CallbackContext callbackContext) {
         this.action = action;
 
         if (RuptionARPlugin.ACTION_CLOSE.equals( action)) {
