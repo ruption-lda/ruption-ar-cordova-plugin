@@ -36,15 +36,6 @@
 
         <!-- copy google arcore sdk -->
         <lib-file src="src/android/googlearcoresdk.aar"/>
-		<lib-file src="src/android/libs/appcompat-1.3.1.aar"/>
-		<lib-file src="src/android/libs/core-1.7.0-alpha01.aar"/>
-		<lib-file src="src/android/libs/drawerlayout-1.1.1.aar"/>
-		<lib-file src="src/android/libs/customview-1.1.0.aar"/>
-		<lib-file src="src/android/libs/fragment-1.4.0-alpha06.aar"/>
-		<lib-file src="src/android/libs/activity-1.3.1.aar"/>
-		<lib-file src="src/android/libs/savedstate-1.1.0.aar"/>
-		<lib-file src="src/android/libs/lifecycle-common-2.4.0-alpha03.jar"/>
-		<lib-file src="src/android/libs/lifecycle-viewmodel-2.3.1.aar"/>
 		
         <!-- copy build extras, necessary for googlearcoresdk.aar -->
         <framework src="src/android/build-extras.gradle" custom="true" type="gradleReference" />
