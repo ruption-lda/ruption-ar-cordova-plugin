@@ -8,7 +8,7 @@ dependencies {
     implementation (name: 'activity-1.3.1', ext: 'aar')
     implementation (name: 'lifecycle-viewmodel-2.4.0-alpha03', ext: 'aar')
     implementation (name: 'savedstate-1.1.0', ext: 'aar')
-    implementation (name: 'lifecycle-common-java8-2.4.0-alpha03', ext: 'jar')
+    implementation name: 'lifecycle-common-2.4.0-alpha03'
     implementation 'com.google.ar:core:1.25.0'
 }
 
