@@ -21,5 +21,6 @@ repositories {
 android {
     packagingOptions {
         exclude 'META-INF/androidx.lifecycle_lifecycle-viewmodel.version'
+        exclude 'META-INF/androidx.drawerlayout_drawerlayout.version'
     }
 }
