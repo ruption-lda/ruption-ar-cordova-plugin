@@ -9,7 +9,7 @@ dependencies {
     compile (name: 'lifecycle-viewmodel-2.4.0-alpha03', ext: 'aar')
     compile (name: 'savedstate-1.1.0', ext: 'aar')
     compile (name: 'lifecycle-common-2.4.0-alpha03', ext: 'jar'){
-        exclude group: 'androidx.lifecycle.ClassesInfoCache', module: 'androidx.lifecycle:lifecycle-common:2.4.0-alpha03'
+        exclude group: 'androidx.lifecycle', module: 'lifecycle-common'
     }
     compile 'com.google.ar:core:1.25.0'
 }
