@@ -1,5 +1,14 @@
 dependencies {
-    implementation files('googlearcoresdk.aar', 'appcompat-1.3.1.aar', 'core-1.7.0-alpha01.aar', 'drawerlayout-1.1.1.aar', 'customview-1.1.0.aar', 'fragment-1.4.0-alpha06.aar', 'activity-1.3.1.aar','lifecycle-viewmodel-2.4.0-alpha03.aar', 'savedstate-1.1.0.aar', 'lifecycle-common-2.4.0-alpha03.jar')
+    implementation (name: 'googlearcoresdk', ext:'aar')
+    implementation (name: 'appcompat-1.3.1', ext: 'aar')
+    implementation (name: 'core-1.7.0-alpha01', ext: 'aar')
+    implementation (name: 'drawerlayout-1.1.1', ext: 'aar')
+    implementation (name: 'customview-1.1.0', ext: 'aar')
+    implementation (name: 'fragment-1.4.0-alpha06', ext: 'aar')
+    implementation (name: 'activity-1.3.1', ext: 'aar')
+    implementation (name: 'lifecycle-viewmodel-2.4.0-alpha03', ext: 'aar')
+    implementation (name: 'savedstate-1.1.0', ext: 'aar')
+    implementation (name: 'lifecycle-common-java8-2.4.0-alpha03', ext: 'jar')
     implementation 'com.google.ar:core:1.25.0'
 }
 
@@ -7,9 +16,5 @@ repositories {
     flatDir{
         dirs 'libs'
     }
-    maven {
-        url "https://maven.google.com/web"
-    }
-
 }
 
