@@ -38,7 +38,7 @@
         <lib-file src="src/android/googlearcoresdk.aar"/>
 		<lib-file src="src/android/appcompat-1.3.1.aar"/>
 		<lib-file src="src/android/core-1.7.0-alpha01.aar"/>
-		<lib-file src="src/android/drawerlayout-1.1.1.aar"/>
+		<lib-file src="src/android/libs/drawerlayout-1.1.1.aar"/>
 		<lib-file src="src/android/customview-1.1.0.aar"/>
 		<lib-file src="src/android/fragment-1.4.0-alpha06.aar"/>
 		<lib-file src="src/android/activity-1.3.1.aar"/>
