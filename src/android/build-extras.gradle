@@ -24,5 +24,6 @@ android {
         exclude 'META-INF/androidx.drawerlayout_drawerlayout.version'
         exclude 'META-INF/androidx.core_core.version'
         exclude 'META-INF/androidx.fragment_fragment.version'
+        exclude 'META-INF/androidx.customview_customview.version'
     }
 }
