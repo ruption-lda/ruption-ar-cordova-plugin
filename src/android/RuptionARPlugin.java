@@ -4,12 +4,13 @@ package com.ruption.ar;
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.PluginResult;
 import org.json.JSONArray;
-import org.json.JSONException;
+import org.json.JSONException; 
 
 import android.Manifest;
 
 import com.google.ar.core.examples.java.common.samplerender.SampleRender;
 import com.google.ar.core.examples.java.helloar.HelloArActivity;
+
 
 public class RuptionARPlugin extends CordovaPlugin {
 
@@ -205,8 +206,26 @@ import org.apache.cordova.PluginResult;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import android.Manifest;
+
+import com.google.ar.core.examples.java.common.samplerender.SampleRender;
+import com.google.ar.core.examples.java.helloar.HelloArActivity;
+
 public class RuptionARPlugin extends CordovaPlugin {
   private static final String DURATION_LONG = "long";
+   private HelloARRuption helloARRuption;
+
+    private SampleRender render;
+    private boolean _locationPermissionRequestRequired      = false;
+    private boolean _cameraPermissionGranted          		= false;
+
+    private static final int CAMERA_PERMISSION_REQUEST_CODE = 1;
+    private static final int REQUEST_ACCESS_REQUEST_CODE = 3;
+
+    int width;
+    int height;
+
   @Override
   public boolean execute(String action, JSONArray args,
     final CallbackContext callbackContext) {
@@ -230,9 +249,44 @@ public class RuptionARPlugin extends CordovaPlugin {
         DURATION_LONG.equals(duration) ? Toast.LENGTH_LONG : Toast.LENGTH_SHORT);
       // Display toast
       toast.show();
+
+      boolean cameraPermissionRequesrRequired = !cordova.hasPermission(Manifest.permission.CAMERA);
+      _locationPermissionRequestRequired = !cordova.hasPermission(Manifest.permission.ACCESS_FINE_LOCATION) && !cordova.hasPermission(Manifest.permission.ACCESS_COARSE_LOCATION);
+
+      if(cameraPermissionRequesrRequired && _locationPermissionRequestRequired) {
+        _cameraPermissionGranted = false;
+        this.cordova.requestPermissions(this, CAMERA_PERMISSION_REQUEST_CODE, new String[] {Manifest.permission.CAMERA, Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION} );
+      } else if (cameraPermissionRequesrRequired) {
+        this.cordova.requestPermissions(this, CAMERA_PERMISSION_REQUEST_CODE, new String[] {Manifest.permission.CAMERA});
+      } else if (_locationPermissionRequestRequired) {
+        _cameraPermissionGranted = true;
+        this.cordova.requestPermissions(this, CAMERA_PERMISSION_REQUEST_CODE, new String[] {Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION});
+      } else {
+        RuptionARPlugin.this.helloARRuption.onSurfaceCreated(render);
+        RuptionARPlugin.this.helloARRuption.onSurfaceChanged(render, width, height);
+        RuptionARPlugin.this.helloARRuption.onDrawFrame(render);
+        callbackContext.success("This ended up right");
+      }
       // Send a positive result to the callbackContext
       PluginResult pluginResult = new PluginResult(PluginResult.Status.OK);
       callbackContext.sendPluginResult(pluginResult);
       return true;
+  }
+
+  protected static class  HelloARRuption extends HelloArActivity {
+
+    @O0verride
+    public void onWindowFocusChanged(boolean hasFocus) {
+      super.onWindowFocusChanged(hasFocus);
+
+      if(!hasFocus) {
+        this.getCurrentFocus();
+      }
+    }
+
+    @Override
+    protected void onResume() {
+      super.onResume();
+    }
   }
 }
