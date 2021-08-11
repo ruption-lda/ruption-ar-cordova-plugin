@@ -275,7 +275,7 @@ public class RuptionARPlugin extends CordovaPlugin {
 
   protected static class  HelloARRuption extends HelloArActivity {
 
-    @O0verride
+    @Override
     public void onWindowFocusChanged(boolean hasFocus) {
       super.onWindowFocusChanged(hasFocus);
 
