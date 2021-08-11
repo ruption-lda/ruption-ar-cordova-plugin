@@ -105,10 +105,7 @@ function RuptionARPlugin() {}
 // The function that passes work along to native shells
 // Message is a string, duration may be 'long' or 'short'
 RuptionARPlugin.prototype.show = function(message, duration, successCallback, errorCallback) {
-  var options = {};
-  options.message = message;
-  options.duration = duration;
-  cordova.exec(successCallback, errorCallback, 'RuptionARPlugin', 'show', [options]);
+  cordova.exec(successCallback, errorCallback, 'RuptionARPlugin', 'open', []);
 }
 
 // Installation constructor that binds RuptionARPlugin to window

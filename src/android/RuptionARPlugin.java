@@ -1,6 +1,6 @@
 package com.ruption.ar;
 
-/*import org.apache.cordova.CallbackContext;
+import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.PluginResult;
 import org.json.JSONArray;
@@ -61,6 +61,9 @@ public class RuptionARPlugin extends CordovaPlugin {
             else {
                 callbackContext.error( action + "helloARRuption is not present");
             }
+            // Send a positive result to the callbackContext
+            PluginResult pluginResult = new PluginResult(PluginResult.Status.OK);
+            callbackContext.sendPluginResult(pluginResult);
             return true;
         }
         
@@ -71,6 +74,9 @@ public class RuptionARPlugin extends CordovaPlugin {
             else {
                 callbackContext.error( action + ": helloARRuption is not present");
             }
+             // Send a positive result to the callbackContext
+            PluginResult pluginResult = new PluginResult(PluginResult.Status.OK);
+            callbackContext.sendPluginResult(pluginResult);
             return true;
         }
 
@@ -86,6 +92,9 @@ public class RuptionARPlugin extends CordovaPlugin {
             } else {
                 callbackContext.error( action + ": helloARRuption is not present");
             }
+             // Send a positive result to the callbackContext
+            PluginResult pluginResult = new PluginResult(PluginResult.Status.OK);
+            callbackContext.sendPluginResult(pluginResult);
             return true;
         }
 
@@ -101,6 +110,9 @@ public class RuptionARPlugin extends CordovaPlugin {
             } else {
                 callbackContext.error(action + ": helloARRuption is not present");
             }
+             // Send a positive result to the callbackContext
+            PluginResult pluginResult = new PluginResult(PluginResult.Status.OK);
+            callbackContext.sendPluginResult(pluginResult);
             return true;
         }
 
@@ -125,6 +137,9 @@ public class RuptionARPlugin extends CordovaPlugin {
             } else {
                 callbackContext.success();
             }
+             // Send a positive result to the callbackContext
+            PluginResult pluginResult = new PluginResult(PluginResult.Status.OK);
+            callbackContext.sendPluginResult(pluginResult);
             return true;
         }
 
@@ -148,26 +163,14 @@ public class RuptionARPlugin extends CordovaPlugin {
                 RuptionARPlugin.this.helloARRuption.onDrawFrame(render);
                 callbackContext.success("This ended up right");
             }
+             // Send a positive result to the callbackContext
+            PluginResult pluginResult = new PluginResult(PluginResult.Status.OK);
+            callbackContext.sendPluginResult(pluginResult);
             return true;
         }
-
-        if (action.equals("echo")) {
-            String message = "test message";
-            this.echo(message, callbackContext);
-            return true;
-        }
-
 
         callbackContext.sendPluginResult( new PluginResult(PluginResult.Status.ERROR, "no such action: " + action));
         return false;
-    }
-
-    private void echo(String message, CallbackContext callbackContext) {
-        if (message != null && message.length() > 0) {
-            callbackContext.success(message);
-        } else {
-            callbackContext.error(message + "!");
-        }
     }
 
     protected static class  HelloARRuption extends HelloArActivity {
@@ -195,7 +198,8 @@ public class RuptionARPlugin extends CordovaPlugin {
         return false;
     }
 }
-*/
+
+/*
 
 // The native Toast API
 import android.widget.Toast;
