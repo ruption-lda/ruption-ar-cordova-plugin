@@ -3,7 +3,7 @@
 	 * Release date: August 5, 2021
 	 */
 
-	/** var RuptionARPlugin = function() {
+var RuptionARPlugin = function() {
 
         this.CameraPositionUndefined = 0;
         this.CameraPositionFront     = 1;
@@ -97,24 +97,3 @@
 		return window.plugins.ruptionARPlugin;
 	};
 	cordova.addConstructor(RuptionARPlugin.install);
-	*/
-
-// Empty constructor
-function RuptionARPlugin() {}
-
-// The function that passes work along to native shells
-// Message is a string, duration may be 'long' or 'short'
-RuptionARPlugin.prototype.show = function(message, duration, successCallback, errorCallback) {
-  cordova.exec(successCallback, errorCallback, 'RuptionARPlugin', 'open', []);
-}
-
-// Installation constructor that binds RuptionARPlugin to window
-RuptionARPlugin.install = function() {
-  if (!window.plugins) {
-    window.plugins = {};
-  }
-  window.plugins.ruptionARPlugin = new RuptionARPlugin();
-  return window.plugins.ruptionARPlugin;
-};
-cordova.addConstructor(RuptionARPlugin.install);
-
