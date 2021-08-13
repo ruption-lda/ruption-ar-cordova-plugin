@@ -28,7 +28,7 @@ public class RuptionARPlugin extends CordovaPlugin {
     
     private String action;
 
-    private HelloARRuption helloARRuption = new HelloARRuption();
+    private HelloARRuption helloARRuption;
 
     private SampleRender render;
 
