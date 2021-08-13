@@ -26,9 +26,6 @@ var RuptionARPlugin = function() {
 	RuptionARPlugin.prototype.loadWorld = function(successCallback, errorCallback) {
 
 		cordova.exec(successCallback, errorCallback, "RuptionARPlugin", "open", []);
-		alert("Test");
-
-		
 
 		// We add an event listener on the resume and pause event of the application life-cycle
 		document.addEventListener("resume", this.onResume, false);
